@@ -324,8 +324,8 @@ describe('core-js-numbers', () => {
   it.optional(
     'toPrecision returns a string representation of a number in normal notation rounded to precision significant digits',
     () => {
-      assert.equal(tasks.toPrecision(12345, 7), 12345.0);
-      assert.equal(tasks.toPrecision(12.345, 4), 12.35);
+      assert.equal(tasks.toPrecision(12345, 7), '12345.00');
+      assert.equal(tasks.toPrecision(12.345, 4), '12.35');
       assert.equal(
         forbidden.isCommented(tasks.toPrecision),
         false,
